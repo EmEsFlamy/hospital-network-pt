@@ -1,3 +1,7 @@
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Tool](https://img.shields.io/badge/Tool-Cisco%20Packet%20Tracer-blue)
+![Cert](https://img.shields.io/badge/Cert-CompTIA%20Network%2B-red)
+![Stage](https://img.shields.io/badge/Stage-1%20of%204-lightgrey)
 # Hospital Network Simulation 🏥
 
 Simulation of a hospital network built in Cisco Packet Tracer as part of my CompTIA Network+ preparation.
