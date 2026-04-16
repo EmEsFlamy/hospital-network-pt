@@ -28,3 +28,6 @@ Simulation of a hospital network built in Cisco Packet Tracer as part of my Comp
 
 ## Author
 IT Systems Administrator | Studying Cybersecurity | Target: SOC Analyst
+
+## Stage 1 – Physical Topology
+![Physical Topology](screenshots/stage1-physical-topology.png)
