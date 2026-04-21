@@ -37,6 +37,7 @@ IT Systems Administrator | Studying Cybersecurity | Target: SOC Analyst
 ![Physical Topology](screenshots/stage1-physical-topology.png)
 
 ## Stage 2 – VLAN Configuration
+![Updated Physical Topology](screenshots/stage2-full-topology.png)
 
 | Switch | VLAN | Name |
 |---|---|---|
