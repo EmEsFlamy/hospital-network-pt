@@ -80,4 +80,5 @@ Extended ACL `BLOCK-GUEST` applied inbound on Gig0/0.30 to isolate guest network
 | MEDICAL ↔ ADMIN | Permitted |
 
 ![ACL Configuration](screenshots/stage4-acl-config.png)
+
 ![ACL Test Results](screenshots/stage4-acl-test.png)
