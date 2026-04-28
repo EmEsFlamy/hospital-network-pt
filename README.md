@@ -1,7 +1,7 @@
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+![Status](https://img.shields.io/badge/Status-Almost%20Complete-orange)
 ![Tool](https://img.shields.io/badge/Tool-Cisco%20Packet%20Tracer-blue)
 ![Cert](https://img.shields.io/badge/Cert-CompTIA%20Network%2B-red)
-![Stage](https://img.shields.io/badge/Stage-3%20of%204-lightgrey)
+![Stage](https://img.shields.io/badge/Stage-4%20of%205-lightgrey)
 # Hospital Network Simulation 🏥
 
 Simulation of a hospital network built in Cisco Packet Tracer as part of my CompTIA Network+ preparation.
@@ -24,7 +24,10 @@ Simulation of a hospital network built in Cisco Packet Tracer as part of my Comp
 - [x] Stage 1 – Physical topology
 - [x] Stage 2 – VLANs & trunking
 - [x] Stage 3 – IP addressing & subnetting
-- [ ] Stage 4 – Routing & ACLs
+- [x] Stage 4 – Routing & ACLs
+- [ ] Stage 5A – DHCP Server configuration
+- [ ] Stage 5B – Port Security
+- [ ] Stage 5C – Syslog & NTP
 
 ## Tools
 - Cisco Packet Tracer 8.x
@@ -64,3 +67,17 @@ Router-on-a-Stick configured on GigabitEthernet0/0 with subinterfaces per VLAN.
 Inter-VLAN routing verified via ping (TTL=127 confirms traffic routed through router).
 
 ![Router Subinterfaces](screenshots/stage3-router-subinterfaces.png)
+
+## Stage 4 – Routing & ACLs
+
+Extended ACL `BLOCK-GUEST` applied inbound on Gig0/0.30 to isolate guest network from hospital infrastructure.
+
+| Rule | Action |
+|---|---|
+| GUEST → MEDICAL | Denied |
+| GUEST → ADMIN | Denied |
+| GUEST → Router | Permitted |
+| MEDICAL ↔ ADMIN | Permitted |
+
+![ACL Configuration](screenshots/stage4-acl-config.png)
+![ACL Test Results](screenshots/stage4-acl-test.png)
