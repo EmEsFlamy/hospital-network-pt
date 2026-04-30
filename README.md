@@ -25,7 +25,7 @@ Simulation of a hospital network built in Cisco Packet Tracer as part of my Comp
 - [x] Stage 2 – VLANs & trunking
 - [x] Stage 3 – IP addressing & subnetting
 - [x] Stage 4 – Routing & ACLs
-- [ ] Stage 5A – DHCP Server configuration
+- [x] Stage 5A – DHCP Server configuration
 - [ ] Stage 5B – Port Security
 - [ ] Stage 5C – Syslog & NTP
 
@@ -82,3 +82,19 @@ Extended ACL `BLOCK-GUEST` applied inbound on Gig0/0.30 to isolate guest network
 ![ACL Configuration](screenshots/stage4-acl-config.png)
 
 ![ACL Test Results](screenshots/stage4-acl-test.png)
+
+## Stage 5A – DHCP Server Configuration
+
+DHCP server configured on SRV-DHCP (VLAN 99) with DHCP Relay (ip helper-address) on router subinterfaces.
+
+| Pool | Network | Range | Gateway |
+|---|---|---|---|
+| MEDICAL | 192.168.10.0/24 | 192.168.10.100+ | 192.168.10.1 |
+| ADMIN | 192.168.20.0/24 | 192.168.20.100+ | 192.168.20.1 |
+| GUEST | 192.168.30.0/24 | 192.168.30.100+ | 192.168.30.1 |
+
+DHCP Relay verified – all VLANs receive addresses from correct pools.
+ACL remains functional after switching from static to DHCP addressing.
+
+![DHCP Server](screenshots/stage5a-dhcp-server.png)
+![DHCP Client](screenshots/stage5a-dhcp-client.png)
