@@ -26,7 +26,7 @@ Simulation of a hospital network built in Cisco Packet Tracer as part of my Comp
 - [x] Stage 3 – IP addressing & subnetting
 - [x] Stage 4 – Routing & ACLs
 - [x] Stage 5A – DHCP Server configuration
-- [ ] Stage 5B – Port Security
+- [x] Stage 5B – Port Security
 - [ ] Stage 5C – Syslog & NTP
 
 ## Tools
@@ -94,6 +94,21 @@ DHCP server configured on SRV-DHCP (VLAN 99) with DHCP Relay (ip helper-address)
 | GUEST | 192.168.30.0/24 | 192.168.30.100+ | 192.168.30.1 |
 
 DHCP Relay verified – all VLANs receive addresses from correct pools.
+
+## Stage 5B – Port Security
+
+Port Security configured on SW-MEDICAL and SW-ADMIN access ports.
+SW-GUEST excluded – guest network is dynamic by design; isolation handled by ACL.
+
+| Switch | Ports | Max MAC | Mode | Sticky |
+|---|---|---|---|---|
+| SW-MEDICAL | Fa0/2, Fa0/3 | 1 | Shutdown | Yes |
+| SW-ADMIN | Fa0/2, Fa0/3 | 1 | Shutdown | Yes |
+
+Unauthorized device connected to a secured port will trigger automatic shutdown.
+
+![Port Security MEDICAL](screenshots/stage5b-port-security-medical.png)
+![Port Security ADMIN](screenshots/stage5b-port-security-admin.png)
 ACL remains functional after switching from static to DHCP addressing.
 
 ![DHCP Server](screenshots/stage5a-dhcp-server.png)
