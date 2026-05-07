@@ -95,6 +95,11 @@ DHCP server configured on SRV-DHCP (VLAN 99) with DHCP Relay (ip helper-address)
 
 DHCP Relay verified – all VLANs receive addresses from correct pools.
 
+ACL remains functional after switching from static to DHCP addressing.
+
+![DHCP Server](screenshots/stage5a-dhcp-server.png)
+![DHCP Client](screenshots/stage5a-dhcp-client.png)
+
 ## Stage 5B – Port Security
 
 Port Security configured on SW-MEDICAL and SW-ADMIN access ports.
@@ -109,7 +114,3 @@ Unauthorized device connected to a secured port will trigger automatic shutdown.
 
 ![Port Security MEDICAL](screenshots/stage5b-port-security-medical.png)
 ![Port Security ADMIN](screenshots/stage5b-port-security-admin.png)
-ACL remains functional after switching from static to DHCP addressing.
-
-![DHCP Server](screenshots/stage5a-dhcp-server.png)
-![DHCP Client](screenshots/stage5a-dhcp-client.png)
