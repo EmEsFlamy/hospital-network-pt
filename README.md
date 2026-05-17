@@ -1,7 +1,7 @@
-![Status](https://img.shields.io/badge/Status-Almost%20Complete-orange)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Tool](https://img.shields.io/badge/Tool-Cisco%20Packet%20Tracer-blue)
 ![Cert](https://img.shields.io/badge/Cert-CompTIA%20Network%2B-red)
-![Stage](https://img.shields.io/badge/Stage-4%20of%205-lightgrey)
+![Stage](https://img.shields.io/badge/Stage-5%20of%205-lightgrey)
 # Hospital Network Simulation 🏥
 
 Simulation of a hospital network built in Cisco Packet Tracer as part of my CompTIA Network+ preparation.
@@ -27,7 +27,7 @@ Simulation of a hospital network built in Cisco Packet Tracer as part of my Comp
 - [x] Stage 4 – Routing & ACLs
 - [x] Stage 5A – DHCP Server configuration
 - [x] Stage 5B – Port Security
-- [ ] Stage 5C – Syslog & NTP
+- [x] Stage 5C – Syslog & NTP
 
 ## Tools
 - Cisco Packet Tracer 8.x
@@ -114,3 +114,19 @@ Unauthorized device connected to a secured port will trigger automatic shutdown.
 
 ![Port Security MEDICAL](screenshots/stage5b-port-security-medical.png)
 ![Port Security ADMIN](screenshots/stage5b-port-security-admin.png)
+
+## Stage 5C – Syslog & NTP
+
+Centralized logging and time synchronization configured on all network devices.
+SRV-DHCP acts as both NTP and Syslog server (192.168.99.2).
+
+| Feature | Server | Stratum |
+|---|---|---|
+| NTP | 192.168.99.2 | 2 |
+| Syslog | 192.168.99.2 | – |
+
+All devices synchronized – log correlation across the network is possible.
+Critical for SOC operations: timestamps on logs are consistent across all devices.
+
+![NTP Status](screenshots/stage5c-ntp-status.png)
+![Syslog](screenshots/stage5c-syslog.png)
